@@ -13,11 +13,27 @@ require_once("config.php");
 //Carrega uma lista de ususarios buscando pelo Login
 //$search = Usuario::search("jo");
 //echo json_encode($search);
+
+
 //Carrega um usuario usando login e senha
+//$ususario = new Usuario();
+//$ususario->login("user","123");
+//echo $ususario;
 
-$ususario = new Usuario();
-$ususario->login("user","123");
+//Criando um novo usuário
+//$aluno = new Usuario("usu", "@luno");
+//$aluno->insert();
+//echo $aluno;
 
-echo $ususario;
+$usuario = new Usuario();
+
+$usuario->loadById(8);
+
+$usuario->update("professor", "proff");
+
+echo $usuario;
+
+
+
 
 ?>
